@@ -18,13 +18,13 @@
 ## 使用した開発環境
 
 (Windowsの場合)
-npm start
-Ctrl + c
+- npm start
+- Ctrl + c
 
 (Macの場合)
-docker compose up (初回だけ--build)
-Ctrl + c
-docker compose down
+- docker compose up (初回だけ--build)
+- Ctrl + c
+- docker compose down
 
 ---
 
@@ -38,4 +38,4 @@ docker compose down
 
 ## サイトの活用
 
-- https://icons8.jp/
+- アイコン: https://icons8.jp/
