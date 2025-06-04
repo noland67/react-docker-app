@@ -39,7 +39,7 @@ const Breadcrumbs = () => {
 
         return (
           <span key={href} className="flex items-center space-x-1">
-            <span className="text-gray-400 px-1">{'>'}</span>
+            <span className="text-white px-1">{'>'}</span>
             {isLast ? (
               <span className="flex items-center space-x-1">
                 {iconSrc && <img src={iconSrc} alt={label} className="w-5 h-5" />}

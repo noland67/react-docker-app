@@ -14,6 +14,7 @@ const Home = () => {
 
   return (
     <div className="min-h-screen flex flex-col items-center justify-center text-white text-4xl font-bold">
+      <img src="/FaZe_Clan_2025.svg" alt="FaZe Clan Logo" className="w-24 h-24 mb-4 invert" />
       Welcome to the Jungle
       <div className="grid grid-cols-3 gap-10 mt-10">
         {buttons.map((btn, i) => (

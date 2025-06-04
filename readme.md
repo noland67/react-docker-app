@@ -18,26 +18,38 @@
 ## 🐳 Docker を使用した開発環境の起動
 
 ### 前提
+
 - Docker Desktop がインストール済みであること
 - Git Bash またはターミナルから実行
 
 ### 起動手順
 
 # 作業ディレクトリへ移動
+
 cd ~/react-docker-app
 
 # ビルド & 起動
+
 docker compose up --build
 
 # ターミナルで停止
+
 Ctrl + C
 
 # コンテナの停止と削除
+
 docker compose down
 
 ---
 
 ### 今後の改善案
+
 - TypeScript 対応
 - React Router や Zustand などの統合
 - テストライブラリ（Jest / React Testing Library）追加
+
+---
+
+### サイトの活用
+
+- https://icons8.jp/
