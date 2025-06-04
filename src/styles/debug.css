@@ -1,0 +1,40 @@
+/* DebugBox.jsで使用 */
+
+.debug-box {
+  position: relative;
+  outline: 2px dashed rgba(255, 255, 255, 0.6); /* コンテンツ境界 */
+}
+
+/* マージンの視覚化（外側） */
+.debug-box::before {
+  content: '';
+  position: absolute;
+  top: calc(-1 * var(--debug-margin, 5rem));
+  left: calc(-1 * var(--debug-margin, 5rem));
+  width: calc(100% + var(--debug-margin, 5rem) * 2);
+  height: calc(100% + var(--debug-margin, 5rem) * 2);
+  background-color: rgba(50, 50, 50, 0.2); /* 濃いグレー */
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* パディングの視覚化（内側） */
+.debug-padding-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  box-sizing: border-box;
+  background-clip: content-box;
+  padding: var(--debug-padding, 5rem);
+  background-color: rgba(200, 200, 200, 0.15); /* 薄いグレー */
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* コンテンツは最前面で透明 */
+.debug-content {
+  position: relative;
+  z-index: 2;
+}
