@@ -1,10 +1,8 @@
 import React from 'react';
-import BackToHome from '../components/BackToHome';
 
 const Tecs = () => {
   return (
     <div>
-      <BackToHome />
       <div
         style={{
           height: '100vh',

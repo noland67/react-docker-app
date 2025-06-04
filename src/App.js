@@ -7,11 +7,13 @@ import Portfolio from './pages/Portfolio';
 import Prospects from './pages/Prospects';
 import Tecs from './pages/Tecs';
 import TecBooks from './pages/TecBooks';
+import Breadcrumbs from './components/Breadcrumbs';
 
 function App() {
   return (
     <Router>
       <BackgroundGradient />
+      <Breadcrumbs />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/profile" element={<Profile />} />
