@@ -7,6 +7,7 @@ import Portfolio from './pages/Portfolio';
 import Prospects from './pages/Prospects';
 import Tecs from './pages/Tecs';
 import TecBooks from './pages/TecBooks';
+import Practice from './pages/Practice';
 import Breadcrumbs from './components/Breadcrumbs';
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
         <Route path="/prospects" element={<Prospects />} />
         <Route path="/tecs" element={<Tecs />} />
         <Route path="/tecbooks" element={<TecBooks />} />
+        <Route path="/practice" element={<Practice />} />
       </Routes>
     </Router>
   );

@@ -9,7 +9,8 @@ const Home = () => {
     { label: 'Portfolio', path: '/portfolio', icon: '/icons/portfolio-96.svg' },
     { label: 'Prospects', path: '/prospects', icon: '/icons/prospects-96.svg' },
     { label: 'Tecs', path: '/tecs', icon: '/icons/tecs-96.svg' },
-    { label: 'TecBooks', path: '/tecbooks', icon: '/icons/tecbooks-96.svg' }
+    { label: 'TecBooks', path: '/tecbooks', icon: '/icons/tecbooks-96.svg' },
+    { label: 'Practice', path: '/practice', icon: '/icons/practice-96.svg' }
   ];
 
   return (

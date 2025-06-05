@@ -7,7 +7,8 @@ const iconMap = {
   portfolio: '/icons/portfolio-96.svg',
   prospects: '/icons/prospects-96.svg',
   tecs: '/icons/tecs-96.svg',
-  tecbooks: '/icons/tecbooks-96.svg'
+  tecbooks: '/icons/tecbooks-96.svg',
+  practice: '/icons/practice-96.svg'
 };
 
 const labelMap = {
@@ -16,7 +17,8 @@ const labelMap = {
   portfolio: 'Portfolio',
   prospects: 'Prospects',
   tecs: 'Tecs',
-  tecbooks: 'TecBooks'
+  tecbooks: 'TecBooks',
+  practice: 'Practice'
 };
 
 const Breadcrumbs = () => {
