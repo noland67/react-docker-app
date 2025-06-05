@@ -1,6 +1,6 @@
 import React from 'react';
 
-const TecBooks = () => {
+const TecBooks: React.FC = () => {
   return (
     <div>
       <div

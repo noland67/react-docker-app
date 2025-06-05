@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Practice = () => {
+const Practice: React.FC = () => {
   return (
     <div>
       <div

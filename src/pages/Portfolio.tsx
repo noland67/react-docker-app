@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Protfolio = () => {
+const Portfolio: React.FC = () => {
   return (
     <div>
       <div
@@ -16,10 +16,10 @@ const Protfolio = () => {
           position: 'relative'
         }}
       >
-        Welcome to Protfolio.
+        Welcome to Portfolio.
       </div>
     </div>
   );
 };
 
-export default Protfolio;
+export default Portfolio;

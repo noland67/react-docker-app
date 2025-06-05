@@ -1,12 +1,12 @@
 import React, { useEffect, useRef, useState, useCallback } from 'react';
 
-const BackgroundGradient = () => {
-  const gradient1Ref = useRef(null);
-  const gradient2Ref = useRef(null);
-  const [fadeIn, setFadeIn] = useState(false);
-  const [hue, setHue] = useState(200);
+const BackgroundGradient: React.FC = () => {
+  const gradient1Ref = useRef<HTMLDivElement | null>(null);
+  const gradient2Ref = useRef<HTMLDivElement | null>(null);
+  const [fadeIn, setFadeIn] = useState<boolean>(false);
+  const [hue, setHue] = useState<number>(200);
 
-  const createGradient = useCallback((baseHue: number) => {
+  const createGradient = useCallback((baseHue: number): string => {
     const h1 = baseHue % 360;
     const h2 = (baseHue + 40) % 360;
     const color1 = `hsl(${h1}, 65%, 20%)`;
@@ -15,8 +15,8 @@ const BackgroundGradient = () => {
   }, []);
 
   const updateGradient = useCallback(() => {
-    const g1 = document.getElementById('gradient1') as HTMLElement | null;
-    const g2 = document.getElementById('gradient2') as HTMLElement | null;
+    const g1 = gradient1Ref.current;
+    const g2 = gradient2Ref.current;
 
     if (!g1 || !g2) return;
 
@@ -32,8 +32,8 @@ const BackgroundGradient = () => {
   }, [hue, createGradient]);
 
   useEffect(() => {
-    const g1 = document.getElementById('gradient1') as HTMLElement | null;
-    const g2 = document.getElementById('gradient2') as HTMLElement | null;
+    const g1 = gradient1Ref.current;
+    const g2 = gradient2Ref.current;
 
     if (g1 && g2) {
       const initial = createGradient(hue);

@@ -1,8 +1,15 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import HomePageIcons from '../data/HomePageIcons'; // 外部定義を読み込む
+import HomePageIcons from '../data/HomePageIcons'; // 外部定義
 
-const Home = () => {
+// アイコン情報の型定義（推論ではなく明示）
+type IconButton = {
+  label: string;
+  path: string;
+  icon: string;
+};
+
+const Home: React.FC = () => {
   const navigate = useNavigate();
 
   return (
@@ -10,7 +17,7 @@ const Home = () => {
       <img src="/FaZe_Clan_2025.svg" alt="FaZe Clan Logo" className="w-24 h-24 mb-4 invert" />
       Welcome to the Jungle
       <div className="grid grid-cols-3 gap-10 mt-10">
-        {HomePageIcons.map((btn, i) => (
+        {(HomePageIcons as IconButton[]).map((btn, i) => (
           <button
             key={i}
             onClick={() => navigate(btn.path)}

@@ -1,6 +1,8 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import BackgroundGradient from './components/BackgroundGradient';
+import Breadcrumbs from './components/Breadcrumbs';
+
 import Home from './pages/Home';
 import Profile from './pages/Profile';
 import Portfolio from './pages/Portfolio';
@@ -8,7 +10,6 @@ import Prospects from './pages/Prospects';
 import Tecs from './pages/Tecs';
 import TecBooks from './pages/TecBooks';
 import Practice from './pages/Practice';
-import Breadcrumbs from './components/Breadcrumbs';
 
 const App: React.FC = () => {
   return (

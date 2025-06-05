@@ -11,12 +11,13 @@ const DebugBox: React.FC<DebugBoxProps> = ({ children, className = '', style = {
   const ref = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    if (ref.current) {
-      const computed = window.getComputedStyle(ref.current);
+    const el = ref.current;
+    if (el) {
+      const computed = window.getComputedStyle(el);
       const margin = computed.marginTop;
       const padding = computed.paddingTop;
-      ref.current.style.setProperty('--debug-margin', margin);
-      ref.current.style.setProperty('--debug-padding', padding);
+      el.style.setProperty('--debug-margin', margin);
+      el.style.setProperty('--debug-padding', padding);
     }
   }, []);
 

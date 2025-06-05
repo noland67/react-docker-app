@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Tecs = () => {
+const Tecs: React.FC = () => {
   return (
     <div>
       <div

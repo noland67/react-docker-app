@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Prospects = () => {
+const Prospects: React.FC = () => {
   return (
     <div>
       <div
