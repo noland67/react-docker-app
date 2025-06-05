@@ -6,7 +6,7 @@ const BackgroundGradient = () => {
   const [fadeIn, setFadeIn] = useState(false);
   const [hue, setHue] = useState(200);
 
-  const createGradient = useCallback((baseHue) => {
+  const createGradient = useCallback((baseHue: number) => {
     const h1 = baseHue % 360;
     const h2 = (baseHue + 40) % 360;
     const color1 = `hsl(${h1}, 65%, 20%)`;
@@ -15,8 +15,9 @@ const BackgroundGradient = () => {
   }, []);
 
   const updateGradient = useCallback(() => {
-    const g1 = gradient1Ref.current;
-    const g2 = gradient2Ref.current;
+    const g1 = document.getElementById('gradient1') as HTMLElement | null;
+    const g2 = document.getElementById('gradient2') as HTMLElement | null;
+
     if (!g1 || !g2) return;
 
     const nextHue = (hue + 30) % 360;
@@ -31,8 +32,9 @@ const BackgroundGradient = () => {
   }, [hue, createGradient]);
 
   useEffect(() => {
-    const g1 = gradient1Ref.current;
-    const g2 = gradient2Ref.current;
+    const g1 = document.getElementById('gradient1') as HTMLElement | null;
+    const g2 = document.getElementById('gradient2') as HTMLElement | null;
+
     if (g1 && g2) {
       const initial = createGradient(hue);
       g1.style.background = initial;
@@ -46,6 +48,7 @@ const BackgroundGradient = () => {
   return (
     <>
       <div
+        id="gradient1"
         ref={gradient1Ref}
         style={{
           position: 'fixed',
@@ -58,6 +61,7 @@ const BackgroundGradient = () => {
         }}
       />
       <div
+        id="gradient2"
         ref={gradient2Ref}
         style={{
           position: 'fixed',

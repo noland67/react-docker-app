@@ -1,8 +1,14 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useRef, useEffect, ReactNode, CSSProperties } from 'react';
 import '../styles/debug.css';
 
-const DebugBox = ({ children, className = '', style = {} }) => {
-  const ref = useRef();
+type DebugBoxProps = {
+  children: ReactNode;
+  className?: string;
+  style?: CSSProperties;
+};
+
+const DebugBox: React.FC<DebugBoxProps> = ({ children, className = '', style = {} }) => {
+  const ref = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     if (ref.current) {

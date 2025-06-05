@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
 
-const iconMap = {
+const iconMap: { [key: string]: string } = {
   home: '/icons/home-96.svg',
   profile: '/icons/profile-96.svg',
   portfolio: '/icons/portfolio-96.svg',
@@ -11,7 +11,7 @@ const iconMap = {
   practice: '/icons/practice-96.svg'
 };
 
-const labelMap = {
+const labelMap: { [key: string]: string } = {
   home: 'Home',
   profile: 'Profile',
   portfolio: 'Portfolio',
@@ -28,10 +28,17 @@ const Breadcrumbs = () => {
   return (
     <nav className="flex items-center px-6 py-4 text-white text-sm z-[99] relative space-x-1">
       {/* Home link is always first */}
-      <Link to="/" className="flex items-center space-x-1 hover:underline">
-        <img src={iconMap['home']} alt="Home" className="w-5 h-5" />
-        <span>{labelMap['home']}</span>
-      </Link>
+      {location.pathname === '/' ? (
+        <span className="flex items-center space-x-1 text-white">
+          <img src={iconMap['home']} alt="Home" className="w-5 h-5" />
+          <span>{labelMap['home']}</span>
+        </span>
+      ) : (
+        <Link to="/" className="flex items-center space-x-1 hover:underline">
+          <img src={iconMap['home']} alt="Home" className="w-5 h-5" />
+          <span>{labelMap['home']}</span>
+        </Link>
+      )}
 
       {pathnames.map((key, index) => {
         const href = '/' + pathnames.slice(0, index + 1).join('/');

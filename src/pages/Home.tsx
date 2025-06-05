@@ -1,24 +1,16 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
+import HomePageIcons from '../data/HomePageIcons'; // 外部定義を読み込む
 
 const Home = () => {
   const navigate = useNavigate();
-
-  const buttons = [
-    { label: 'Profile', path: '/profile', icon: '/icons/profile-96.svg' },
-    { label: 'Portfolio', path: '/portfolio', icon: '/icons/portfolio-96.svg' },
-    { label: 'Prospects', path: '/prospects', icon: '/icons/prospects-96.svg' },
-    { label: 'Tecs', path: '/tecs', icon: '/icons/tecs-96.svg' },
-    { label: 'TecBooks', path: '/tecbooks', icon: '/icons/tecbooks-96.svg' },
-    { label: 'Practice', path: '/practice', icon: '/icons/practice-96.svg' }
-  ];
 
   return (
     <div className="min-h-screen flex flex-col items-center justify-center text-white text-4xl font-bold">
       <img src="/FaZe_Clan_2025.svg" alt="FaZe Clan Logo" className="w-24 h-24 mb-4 invert" />
       Welcome to the Jungle
       <div className="grid grid-cols-3 gap-10 mt-10">
-        {buttons.map((btn, i) => (
+        {HomePageIcons.map((btn, i) => (
           <button
             key={i}
             onClick={() => navigate(btn.path)}

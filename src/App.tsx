@@ -10,7 +10,7 @@ import TecBooks from './pages/TecBooks';
 import Practice from './pages/Practice';
 import Breadcrumbs from './components/Breadcrumbs';
 
-function App() {
+const App: React.FC = () => {
   return (
     <Router>
       <BackgroundGradient />
@@ -26,6 +26,6 @@ function App() {
       </Routes>
     </Router>
   );
-}
+};
 
 export default App;
