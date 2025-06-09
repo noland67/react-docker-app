@@ -2,7 +2,16 @@ import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
 
 // アイコンとラベルのマップ型
-type PageKey = 'home' | 'profile' | 'portfolio' | 'prospects' | 'tecs' | 'tecbooks' | 'practice' | 'pixelmaker';
+type PageKey =
+  | 'home'
+  | 'profile'
+  | 'portfolio'
+  | 'prospects'
+  | 'tecs'
+  | 'tecbooks'
+  | 'practice'
+  | 'pixelmaker'
+  | 'tabaco';
 
 const iconMap: Record<PageKey, string> = {
   home: '/icons/home-96.svg',
@@ -12,7 +21,8 @@ const iconMap: Record<PageKey, string> = {
   tecs: '/icons/tecs-96.svg',
   tecbooks: '/icons/tecbooks-96.svg',
   practice: '/icons/practice-96.svg',
-  pixelmaker: '/icons/Operation_Payback.svg'
+  pixelmaker: '/icons/Operation_Payback.svg',
+  tabaco: '/icons/Operation_Bravo.svg'
 };
 
 const labelMap: Record<PageKey, string> = {
@@ -23,7 +33,8 @@ const labelMap: Record<PageKey, string> = {
   tecs: 'Tecs',
   tecbooks: 'TecBooks',
   practice: 'Practice',
-  pixelmaker: 'PixelMaker'
+  pixelmaker: 'PixelMaker',
+  tabaco: 'Tabaco'
 };
 
 const Breadcrumbs: React.FC = () => {
