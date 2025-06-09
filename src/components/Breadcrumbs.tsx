@@ -2,7 +2,7 @@ import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
 
 // アイコンとラベルのマップ型
-type PageKey = 'home' | 'profile' | 'portfolio' | 'prospects' | 'tecs' | 'tecbooks' | 'practice';
+type PageKey = 'home' | 'profile' | 'portfolio' | 'prospects' | 'tecs' | 'tecbooks' | 'practice' | 'pixelmaker';
 
 const iconMap: Record<PageKey, string> = {
   home: '/icons/home-96.svg',
@@ -11,7 +11,8 @@ const iconMap: Record<PageKey, string> = {
   prospects: '/icons/prospects-96.svg',
   tecs: '/icons/tecs-96.svg',
   tecbooks: '/icons/tecbooks-96.svg',
-  practice: '/icons/practice-96.svg'
+  practice: '/icons/practice-96.svg',
+  pixelmaker: '/icons/Operation_Payback.svg'
 };
 
 const labelMap: Record<PageKey, string> = {
@@ -21,7 +22,8 @@ const labelMap: Record<PageKey, string> = {
   prospects: 'Prospects',
   tecs: 'Tecs',
   tecbooks: 'TecBooks',
-  practice: 'Practice'
+  practice: 'Practice',
+  pixelmaker: 'PixelMaker'
 };
 
 const Breadcrumbs: React.FC = () => {
@@ -29,7 +31,7 @@ const Breadcrumbs: React.FC = () => {
   const pathnames = location.pathname === '/' ? [] : location.pathname.slice(1).split('/');
 
   return (
-    <nav className="flex items-center px-6 py-4 text-white text-sm z-[99] relative space-x-1">
+    <nav className="fixed top-0 left-0 w-full flex items-center px-6 py-4 text-white text-sm z-[99] space-x-1 bg-[#011626] backdrop-blur-md shadow-md">
       {/* Home link is always first */}
       {location.pathname === '/' ? (
         <span className="flex items-center space-x-1 text-white">
