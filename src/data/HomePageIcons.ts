@@ -12,7 +12,7 @@ const HomePageIcons = [
   { label: 'TecBooks', path: '/tecbooks', icon: '/icons/tecbooks-96.svg' },
   { label: 'Practice', path: '/practice', icon: '/icons/practice-96.svg' },
   { label: 'PixelMaker', path: '/pixelmaker', icon: '/icons/Operation_Payback.svg' },
-  { label: 'Tabacco', path: '/tabacco', icon: '/icons/Operation_Bravo.svg' }
+  { label: 'Tabaco', path: '/tabaco', icon: '/icons/Operation_Bravo.svg' }
 ];
 
 export default HomePageIcons;

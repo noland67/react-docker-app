@@ -11,13 +11,13 @@ import Tecs from './pages/Tecs';
 import TecBooks from './pages/TecBooks';
 import Practice from './pages/Practice';
 import PixelMaker from './pages/PixelMaker';
-import Tabacco from './pages/Tabaco';
+import Tabaco from './pages/Tabaco';
 
 const AppContent: React.FC = () => {
   const location = useLocation();
 
   // 非表示にしたいパスを配列で管理
-  const hiddenRoutes = ['/pixelmaker', '/tabacco'];
+  const hiddenRoutes = ['/pixelmaker', '/tabaco'];
   const shouldHideBackground = hiddenRoutes.includes(location.pathname);
 
   return (
@@ -33,7 +33,7 @@ const AppContent: React.FC = () => {
         <Route path="/tecbooks" element={<TecBooks />} />
         <Route path="/practice" element={<Practice />} />
         <Route path="/pixelmaker" element={<PixelMaker />} />
-        <Route path="/tabacco" element={<Tabacco />} />
+        <Route path="/tabaco" element={<Tabaco />} />
       </Routes>
     </>
   );
